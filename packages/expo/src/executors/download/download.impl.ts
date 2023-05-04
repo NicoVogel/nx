@@ -5,7 +5,8 @@ import {
   createWriteStream,
   existsSync,
   mkdirSync,
-} from 'fs';
+  removeSync,
+} from 'fs-extra';
 import fetch from 'node-fetch';
 import { promisify } from 'util';
 import { pipeline } from 'stream';
@@ -46,6 +47,8 @@ export default async function* downloadExecutor(
 
   if (!existsSync(options.output)) {
     mkdirSync(options.output, { recursive: true });
+  } else {
+    removeSync(options.output);
   }
 
   const downloadFileName = buildUrl.split('/').pop();

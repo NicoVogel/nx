@@ -124,13 +124,13 @@ describe('app', () => {
         'android.eas': {
           binaryPath: '../../../apps/my-dir/my-app/dist/MyApp.apk',
           build:
-            'npx nx run my-app:download --platform android --output=apps/my-dir/my-app/dist/',
+            'npx nx run my-app:download --platform android --output=../../../apps/my-dir/my-app/dist/',
           type: 'ios.app',
         },
         'android.local': {
           binaryPath: '../../../apps/my-dir/my-app/dist/MyApp.apk',
           build:
-            'npx nx run my-app:build --platform android --profile preview --wait --local --no-interactive --output=apps/my-dir/my-app/dist/',
+            'npx nx run my-app:build --platform android --profile preview --wait --local --no-interactive --output=../../../apps/my-dir/my-app/dist/',
           type: 'ios.app',
         },
         'android.release': {
@@ -150,13 +150,13 @@ describe('app', () => {
         'ios.eas': {
           binaryPath: '../../../apps/my-dir/my-app/dist/MyApp.app',
           build:
-            'npx nx run my-app:download --platform ios --distribution simulator --output=apps/my-dir/my-app/dist/',
+            'npx nx run my-app:download --platform ios --distribution simulator --output=../../../apps/my-dir/my-app/dist/',
           type: 'ios.app',
         },
         'ios.local': {
           binaryPath: '../../../apps/my-dir/my-app/dist/MyApp.app',
           build:
-            'npx nx run my-app:build --platform ios --profile preview --wait --local --no-interactive --output=apps/my-dir/my-app/dist/',
+            'npx nx run my-app:build --platform ios --profile preview --wait --local --no-interactive --output=../../../apps/my-dir/my-app/dist/',
           type: 'ios.app',
         },
         'ios.release': {
@@ -199,13 +199,13 @@ describe('app', () => {
         'android.eas': {
           binaryPath: '../../apps/my-app/dist/MyApp.apk',
           build:
-            'npx nx run my-app:download --platform android --output=apps/my-app/dist/',
+            'npx nx run my-app:download --platform android --output=../../apps/my-app/dist/',
           type: 'ios.app',
         },
         'android.local': {
           binaryPath: '../../apps/my-app/dist/MyApp.apk',
           build:
-            'npx nx run my-app:build --platform android --profile preview --wait --local --no-interactive --output=apps/my-app/dist/',
+            'npx nx run my-app:build --platform android --profile preview --wait --local --no-interactive --output=../../apps/my-app/dist/',
           type: 'ios.app',
         },
         'android.release': {
@@ -225,13 +225,13 @@ describe('app', () => {
         'ios.eas': {
           binaryPath: '../../apps/my-app/dist/MyApp.app',
           build:
-            'npx nx run my-app:download --platform ios --distribution simulator --output=apps/my-app/dist/',
+            'npx nx run my-app:download --platform ios --distribution simulator --output=../../apps/my-app/dist/',
           type: 'ios.app',
         },
         'ios.local': {
           binaryPath: '../../apps/my-app/dist/MyApp.app',
           build:
-            'npx nx run my-app:build --platform ios --profile preview --wait --local --no-interactive --output=apps/my-app/dist/',
+            'npx nx run my-app:build --platform ios --profile preview --wait --local --no-interactive --output=../../apps/my-app/dist/',
           type: 'ios.app',
         },
         'ios.release': {
@@ -275,13 +275,13 @@ describe('app', () => {
         'android.eas': {
           binaryPath: '../../apps/my-app/dist/myappname.apk',
           build:
-            'npx nx run my-app:download --platform android --output=apps/my-app/dist/',
+            'npx nx run my-app:download --platform android --output=../../apps/my-app/dist/',
           type: 'ios.app',
         },
         'android.local': {
           binaryPath: '../../apps/my-app/dist/myappname.apk',
           build:
-            'npx nx run my-app:build --platform android --profile preview --wait --local --no-interactive --output=apps/my-app/dist/',
+            'npx nx run my-app:build --platform android --profile preview --wait --local --no-interactive --output=../../apps/my-app/dist/',
           type: 'ios.app',
         },
         'android.release': {
@@ -301,13 +301,13 @@ describe('app', () => {
         'ios.eas': {
           binaryPath: '../../apps/my-app/dist/myappname.app',
           build:
-            'npx nx run my-app:download --platform ios --distribution simulator --output=apps/my-app/dist/',
+            'npx nx run my-app:download --platform ios --distribution simulator --output=../../apps/my-app/dist/',
           type: 'ios.app',
         },
         'ios.local': {
           binaryPath: '../../apps/my-app/dist/myappname.app',
           build:
-            'npx nx run my-app:build --platform ios --profile preview --wait --local --no-interactive --output=apps/my-app/dist/',
+            'npx nx run my-app:build --platform ios --profile preview --wait --local --no-interactive --output=../../apps/my-app/dist/',
           type: 'ios.app',
         },
         'ios.release': {
