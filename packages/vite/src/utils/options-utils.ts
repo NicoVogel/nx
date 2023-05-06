@@ -18,6 +18,7 @@ import {
 import { ViteDevServerExecutorOptions } from '../executors/dev-server/schema';
 import { VitePreviewServerExecutorOptions } from '../executors/preview-server/schema';
 import replaceFiles from '../../plugins/rollup-replace-files.plugin';
+import generatePackageJson from '../../plugins/vite-generate-package-json-plugin';
 import { ViteBuildExecutorOptions } from '../executors/build/schema';
 import * as path from 'path';
 
@@ -31,10 +32,10 @@ export function normalizeViteConfigFilePath(
   return configFile && existsSync(joinPathFragments(configFile))
     ? configFile
     : existsSync(joinPathFragments(`${projectRoot}/vite.config.ts`))
-    ? joinPathFragments(`${projectRoot}/vite.config.ts`)
-    : existsSync(joinPathFragments(`${projectRoot}/vite.config.js`))
-    ? joinPathFragments(`${projectRoot}/vite.config.js`)
-    : undefined;
+      ? joinPathFragments(`${projectRoot}/vite.config.ts`)
+      : existsSync(joinPathFragments(`${projectRoot}/vite.config.js`))
+        ? joinPathFragments(`${projectRoot}/vite.config.js`)
+        : undefined;
 }
 
 /**
@@ -81,7 +82,10 @@ export function getViteSharedConfig(
     root,
     base: options.base,
     configFile: normalizeViteConfigFilePath(projectRoot, options.configFile),
-    plugins: [replaceFiles(options.fileReplacements) as PluginOption],
+    plugins: [
+      replaceFiles(options.fileReplacements) as PluginOption,
+      options.generatePackageJson ? generatePackageJson({}, context) : false,
+    ],
     optimizeDeps: { force: options.force },
     clearScreen: clearScreen,
     logLevel: options.logLevel,

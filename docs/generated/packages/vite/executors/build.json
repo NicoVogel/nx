@@ -88,6 +88,11 @@
         "description": "Enable re-building when files change.",
         "oneOf": [{ "type": "boolean" }, { "type": "object" }],
         "default": false
+      },
+      "generatePackageJson": {
+        "description": "Generate package.json file.",
+        "type": "boolean",
+        "default": false
       }
     },
     "definitions": {},

@@ -135,6 +135,11 @@
         }
       ],
       "default": false
+    },
+    "generatePackageJson": {
+      "description": "Generate package.json file.",
+      "type": "boolean",
+      "default": false
     }
   },
   "definitions": {},
